@@ -123,7 +123,7 @@ function updateMusicIcon() {
 
 // Countdown
 function initializeCountdown() {
-    const targetDate = new Date('2026-12-19T18:30:00-04:00').getTime();
+    const targetDate = new Date('2026-12-26T19:00:00-04:00').getTime();
     
     function updateCountdown() {
         const now = new Date().getTime();
@@ -290,8 +290,8 @@ function openLocation(location) {
     // Enlaces de ejemplo (dirección ficticia) - ceremonia y celebración
     // PEGAR AQUÍ el enlace de Google Maps del local
     const mapsUrls = {
-        ceremony: "",
-        reception: ""
+        ceremony: "https://www.google.com/maps/search/?api=1&query=Rancho+Nana+Palmarito+Abajo+Salcedo",
+        reception: "https://www.google.com/maps/search/?api=1&query=Rancho+Nana+Palmarito+Abajo+Salcedo"
     };
     const mapsUrl = mapsUrls[location] || mapsUrls.ceremony;
     if (!mapsUrl) { showToast('Ubicación', 'Aquí irá el enlace de Google Maps del local.'); return; }
@@ -305,7 +305,7 @@ function openLocation(location) {
 function sharePhotos() {
     // Ejemplo: aquí se debe colocar el enlace real a la carpeta de Google Drive.
     // PEGAR AQUÍ el enlace del álbum compartido (Google Fotos / Drive)
-    const photosUrl = '';
+    const photosUrl = 'https://photos.app.goo.gl/tGigSd75HYdFa8Pd6';
     if (!photosUrl) { showToast('Comparte tus fotos', 'Aquí irá el enlace del álbum compartido.'); return; }
     window.open(photosUrl, '_blank');
 }
@@ -377,8 +377,8 @@ function copyAccount() {
 function confirmAttendance() {
     // Confirmación directa por WhatsApp
     // PEGAR AQUÍ el número de WhatsApp (solo dígitos, con código de país, ej. 1809XXXXXXX)
-    const phone = '18099180520';
-    const msg = '¡Hola! Confirmo mi asistencia a los XV años de Yerianny. 🎉';
+    const phone = '18098460016';
+    const msg = '¡Hola! Confirmo mi asistencia a los XV de Meryan Tejada Gómez. 🎉';
     if (!phone) { showToast('Confirmar asistencia', 'Aquí irá el número de WhatsApp para confirmar.'); return; }
     window.open('https://wa.me/' + phone + '?text=' + encodeURIComponent(msg), '_blank');
 }
@@ -431,7 +431,7 @@ function showToast(title, message) {
         '.parents-intro', '.parents-title', '.parents-names', '.parents-ornament',
         '.section-title', '.section-subtitle', '.countdown-container',
         '.event-card', '.event-icon', '.camera-icon', '.carousel-container', '.carousel-counter',
-        '.party-card', '.gift-icon', '.gifts-container .btn-wedding',
+        '.party-card', '.gift-icon',
         '.whatsapp-icon', '.rsvp-container .btn-wedding', '.footer-content'
     ];
     if (!('IntersectionObserver' in window)) return;
