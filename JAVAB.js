@@ -290,8 +290,8 @@ function openLocation(location) {
     // Enlaces de ejemplo (dirección ficticia) - ceremonia y celebración
     // PEGAR AQUÍ el enlace de Google Maps del local
     const mapsUrls = {
-        ceremony: "https://www.google.com/maps/search/?api=1&query=Rancho+Nana+Palmarito+Abajo+Salcedo",
-        reception: "https://www.google.com/maps/search/?api=1&query=Rancho+Nana+Palmarito+Abajo+Salcedo"
+        ceremony: "https://maps.app.goo.gl/Q359oRS61ZkwGMJ37",
+        reception: "https://maps.app.goo.gl/Q359oRS61ZkwGMJ37"
     };
     const mapsUrl = mapsUrls[location] || mapsUrls.ceremony;
     if (!mapsUrl) { showToast('Ubicación', 'Aquí irá el enlace de Google Maps del local.'); return; }
